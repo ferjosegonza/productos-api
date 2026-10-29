@@ -79,6 +79,17 @@ Todas las rutas llevan el prefijo `/api`. Las solicitudes con cuerpo deben usar 
 
 Excepto `POST /auth/token`, todos los endpoints requieren `Authorization: Bearer <token>`.
 
+Para comenzar a utilizar la API se envía un POST a http://127.0.0.1:8000/api/auth/token con este JSON (siguiendo el ejemplo creado en el tinker):
+```json
+{
+  "email": "api@example.com",
+  "password": "TU_CLAVE",
+  "device_name": "postman"
+}
+```
+El token obtenido se deberá utilizar para cada solicitud a la API. Tener en cuenta que vence a los 60 minutos. Ingresar el token (en caso de utilizar Postman) en:
+Autorization -> Auth Type: Bearer Token
+
 Ejemplo de moneda:
 
 ```json
